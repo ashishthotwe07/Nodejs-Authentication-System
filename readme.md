@@ -41,9 +41,9 @@ Before you begin, ensure you have the following installed:
     Create a `.env` file in the root of the project and add the following:
 
     ```env
-    MONGO_URI=your_mongo_db_connection_string
-    GOOGLE_CLIENT_ID=your_google_client_id
-    GOOGLE_CLIENT_SECRET=your_google_client_secret
+    MONGO_URI='mongodb://0.0.0.0:27017/userAuth'
+    GOOGLE_CLIENT_ID='809869379324-55pqcl9q9qq0np0r3oqufcs6jultl6ef.apps.googleusercontent.com'
+    GOOGLE_CLIENT_SECRET='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'
     ```
 
 4. **Run the application:**
@@ -52,7 +52,7 @@ Before you begin, ensure you have the following installed:
     npm start
     ```
 
-    The app will be running at [http://localhost:3000](http://localhost:3000).
+    The app will be running at [http://localhost:8000](http://localhost:8000).
 
 ## Folder Structure
 
@@ -65,8 +65,8 @@ Before you begin, ensure you have the following installed:
 
 ## Usage
 
-- Visit [http://localhost:3000/signup](http://localhost:3000/signup) to sign up.
-- Visit [http://localhost:3000/signin](http://localhost:3000/signin) to sign in.
+- Visit [http://localhost:8000/signup](http://localhost:8000/signup) to sign up.
+- Visit [http://localhost:8000/](http://localhost:8000/) to sign in.
 - Explore other routes for password reset, signout, and Google login.
 
 ## Contributing
