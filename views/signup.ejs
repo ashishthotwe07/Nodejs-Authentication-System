@@ -1,0 +1,42 @@
+<!-- Sign Up Page -->
+<form class="col g-3" action="/postsignup" method="post">
+  <h3>Sign Up</h3>
+
+  <!-- Display success messages -->
+  <% if (successMessages && successMessages.length > 0) { %>
+    <div class="alert alert-success" role="alert">
+      <% successMessages.forEach(message => { %>
+        <p class="mb-0"><%= message %></p>
+      <% }); %>
+    </div>
+  <% } %>
+
+  <!-- Display error messages -->
+  <% if (errorMessages && errorMessages.length > 0) { %>
+    <div class="alert alert-danger" role="alert">
+      <% errorMessages.forEach(message => { %>
+        <p class="mb-0"><%= message %></p>
+      <% }); %>
+    </div>
+  <% } %>
+
+  <div class="col-md-4">
+    <input type="text" class="form-control" name="name" required placeholder="Name">
+  </div> 
+  <div class="col-md-4">
+    <input type="email" class="form-control" name="email" required placeholder="Email">
+  </div>
+  <div class="col-md-4">
+    <input type="password" class="form-control" name="password" required placeholder="Password">
+  </div>
+  <div class="col-md-4">
+    <input type="password" class="form-control" name="confirm_password" required placeholder="Confirm Password">
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Sign up</button>
+  </div>
+  <p class="google-sign-para">
+    <a class="google-sign" href="/oauth/google"><i class="fa-brands fa-google"></i> Sign up with Google</a>
+  </p>
+</form>
