@@ -39,7 +39,8 @@ export default class UserController {
 
             // Check if new_password and confirm_new_password match
             if (new_password !== confirm_new_password) {
-                return res.render('resetpassword', { title: 'Reset Password', user: req.user });
+                req.flash('error' ,'password do not match')
+                return res.redirect('/getreset');
             }
 
             // Hash the new password
@@ -49,7 +50,8 @@ export default class UserController {
             await User.findByIdAndUpdate(req.user._id, { password: hashedPassword });
 
             // Redirect to the home page or any other appropriate page
-            res.redirect('/home');
+            req.flash('success' ,'password updated')
+            res.redirect('back');
         } catch (error) {
             console.error("Error during password reset:", error);
             res.redirect('/');

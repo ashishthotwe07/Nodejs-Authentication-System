@@ -28,7 +28,7 @@ userRouter.get('/getreset', auth, userController.getReset);
 userRouter.post('/reset_password', auth,  userController.postResetPassword);
 
 // Route for handling user sign-in using local strategy
-userRouter.post('/signin', passport.authenticate('local', { failureRedirect: '/' }), userController.postSignIn);
+userRouter.post('/signin', passport.authenticate('local', { failureRedirect: '/' , failureFlash:'username/password incorrect '}), userController.postSignIn);
 
 // Route for handling user sign-up
 userRouter.post('/postsignup',userController.postSignUp);
