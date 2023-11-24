@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "Authentication App",
+    "name": "Node js authentication",
     "builds": [{ "src": "server.js", "use": "@vercel/node" }],
     "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
   }
