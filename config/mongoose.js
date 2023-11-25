@@ -1,8 +1,10 @@
 // Importing mongoose
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
+dotenv.config();
 
-// Connect to the MongoDB database 
-mongoose.connect('mongodb://0.0.0.0:27017/userAuth');
+// Connect to the MongoDB database with new URL parser
+mongoose.connect(process.env.MONGODB_URI);
 
 // Get the connection object from mongoose
 const db = mongoose.connection;

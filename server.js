@@ -12,9 +12,13 @@ import googleStrategy from './config/passport.oauth.strategy.js';
 import flash from 'connect-flash';
 import flashMiddleware from './middleware/flash.middleware.js';
 import MongoStore from 'connect-mongo';
+import dotenv from 'dotenv';
 
 // Create an Express application
 const app = express();
+
+dotenv.config(); // Load environment variables from .env file
+
 
 // Middleware for parsing form data
 app.use(express.urlencoded({ extended: true }));
@@ -43,7 +47,7 @@ app.use(
 
     },
     store: MongoStore.create({
-      mongoUrl: 'mongodb://0.0.0.0:27017/userAuth', // MongoDB connection URL
+      mongoUrl: process.env.MONGODB_URI, // MongoDB connection URL
       collectionName: 'sessionData',
       mongooseConnection: db, // Mongoose connection object
     }),
