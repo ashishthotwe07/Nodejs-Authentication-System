@@ -41,7 +41,7 @@ Before you begin, ensure you have the following installed:
     Create a `.env` file in the root of the project and add the following:
 
     ```env
-    MONGO_URI='mongodb://0.0.0.0:27017/userAuth'
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.rrid8sk.mongodb.net/?retryWrites=true&w=majority
     GOOGLE_CLIENT_ID='809869379324-55pqcl9q9qq0np0r3oqufcs6jultl6ef.apps.googleusercontent.com'
     GOOGLE_CLIENT_SECRET='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'
     ```
