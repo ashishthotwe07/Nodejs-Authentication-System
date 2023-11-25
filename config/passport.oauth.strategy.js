@@ -3,10 +3,19 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { User } from '../model/user.model.js';
 import bcrypt from 'bcrypt';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
+
+
+const googleClientId = process.env.GOOGLE_CLIENT_ID;
+const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
+
+
 //  Google OAuth strategy Configuration
 passport.use(new GoogleStrategy({
-    clientID: '809869379324-55pqcl9q9qq0np0r3oqufcs6jultl6ef.apps.googleusercontent.com',
-    clientSecret: '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',
+    clientID: googleClientId,
+    clientSecret: googleClientSecret,
     callbackURL: 'http://localhost:8000/oauth/callback',
 },
     async (accessToken, refreshToken, profile, done) => {
