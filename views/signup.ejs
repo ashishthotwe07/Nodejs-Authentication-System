@@ -1,6 +1,6 @@
 <!-- Sign Up Page -->
 <form class="col g-3" action="/postsignup" method="post">
-  <h3>Sign Up</h3>
+  <h3 class="mb-4">Sign Up</h3>
 
   <!-- Display success messages -->
   <% if (successMessages && successMessages.length > 0) { %>
@@ -20,23 +20,35 @@
     </div>
   <% } %>
 
-  <div class="col-md-4">
-    <input type="text" class="form-control" name="name" required placeholder="Name">
-  </div> 
-  <div class="col-md-4">
-    <input type="email" class="form-control" name="email" required placeholder="Email">
-  </div>
-  <div class="col-md-4">
-    <input type="password" class="form-control" name="password" required placeholder="Password">
-  </div>
-  <div class="col-md-4">
-    <input type="password" class="form-control" name="confirm_password" required placeholder="Confirm Password">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your name" style="width: 300px;">
   </div>
 
-  <div class="col-12">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email" style="width: 300px;">
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password" style="width: 300px;">
+  </div>
+
+  <div class="mb-3">
+    <label for="confirm_password" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required placeholder="Confirm your password" style="width: 300px;">
+  </div>
+
+  <div class="mb-3">
     <button class="btn btn-primary" type="submit">Sign up</button>
   </div>
-  <p class="google-sign-para">
+
+  <p class="mb-3 google-sign-para">
     <a class="google-sign" href="/oauth/google"><i class="fa-brands fa-google"></i> Sign up with Google</a>
+  </p>
+
+  <p class="mb-3">
+    Already have an account? <a href="/">Log in</a>
   </p>
 </form>

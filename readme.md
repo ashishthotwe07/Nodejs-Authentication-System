@@ -1,22 +1,26 @@
 # Node.js Authentication System
 
-A scalable Node.js authentication system with MongoDB integration, supporting user signup, signin, signout, password reset, and Google social authentication.
+Welcome to the Node.js Authentication System, a robust solution for implementing user authentication in your Node.js applications. This system integrates seamlessly with MongoDB and provides features such as user signup, signin, signout, password reset, and Google social authentication.
 
 ## Features
 
-- User signup with email
-- User signin with email
-- User signout
-- Password reset after signin
-- Encrypted storage of passwords in the database
-- Google login/signup (Social authentication)
-- Forgot password (via email or reset password link)
-- Notifications for unmatching passwords during signup and incorrect password during signin
-- (Bonus) reCAPTCHA on signup and login
+- **User Signup and Signin**: Users can securely register and log in using their email addresses.
+  
+- **Signout**: Implemented functionality for users to log out.
+
+- **Password Reset**: Users can reset their passwords securely after signing in.
+
+- **Encrypted Password Storage**: Passwords are securely stored in the database using encryption.
+
+- **Google Social Authentication**: Supports Google login/signup for a seamless user experience.
+
+- **Error Handling**: Notifications for unmatching passwords during signup and incorrect passwords during signin.
+
+
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you start, ensure you have the following installed:
 
 - Node.js and npm
 - MongoDB
@@ -30,23 +34,23 @@ Before you begin, ensure you have the following installed:
     cd Nodejs-Authentication-System
     ```
 
-2. **Install dependencies:**
+2. **Install Dependencies:**
 
     ```bash
     npm install
     ```
 
-3. **Set environment variables:**
+3. **Set Environment Variables:**
 
     Create a `.env` file in the root of the project and add the following:
 
     ```env
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.rrid8sk.mongodb.net/?retryWrites=true&w=majority
+    MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.rrid8sk.mongodb.net/?retryWrites=true&w=majority
     GOOGLE_CLIENT_ID='809869379324-55pqcl9q9qq0np0r3oqufcs6jultl6ef.apps.googleusercontent.com'
     GOOGLE_CLIENT_SECRET='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'
     ```
 
-4. **Run the application:**
+4. **Run the Application:**
 
     ```bash
     npm start

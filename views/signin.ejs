@@ -1,6 +1,6 @@
 <!-- Sign In Page -->
 <form class="col g-3 form" action="/signin" method="post">
-  <h3>Sign In</h3>
+  <h3 class="mb-4">Sign In</h3>
 
   <!-- Display success messages -->
   <% if (successMessages && successMessages.length > 0) { %>
@@ -20,24 +20,27 @@
     </div>
   <% } %>
 
-
-
-
-  
-
-  <div class="col-md-4">
-    <input type="email" class="form-control" name="email" required placeholder="Email">
-  </div>
-  <div class="col-md-4">
-    <input type="password" class="form-control" name="password" required placeholder="Password">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email" style="width: 300px;">
   </div>
 
-  <div class="col-12">
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password" style="width: 300px;">
+  </div>
+
+  <div class="mb-3">
     <button class="btn btn-primary" type="submit">Login</button>
   </div>
-  <p class="google-sign-para">
+
+  <p class="mb-3 google-sign-para">
     <a class="google-sign" href="/oauth/google">
       <i class="fa-brands fa-google"></i> Sign In with Google
     </a>
+  </p>
+
+  <p class="mb-0">
+    Don't have an account? <a href="/signup">Sign up</a>
   </p>
 </form>
